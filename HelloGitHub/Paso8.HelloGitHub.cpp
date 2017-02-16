@@ -2,12 +2,21 @@
 #include "stdafx.h"
 using namespace std;
 
-void main() {
 
-	int a[10] = { 5 };
-	int b = 10;
-	int x = 0;
-	while (true){
-		printf("%d\n", &a[x]); x++;
-}
+
+
+void printOpt(int a[], int length) {
+
+	int *x = a;
+	int *fin = &a[length];
+	while (x < fin) {
+		std::cout << *x << " " << std::endl;
+		x++; //las direcciones de memoria van de 4 en 4 pero como x es un puntero el hecho de incrementar, ya considera el tipo
+	}
+};
+
+
+void main() {
+	int scores[] = { 84, 92, 76, 81, 56 };
+	printOpt(scores, 5);
 }
