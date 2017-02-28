@@ -18,7 +18,7 @@ class Player {
 		return(life > 0);
 	}
 
-	Player() : weapon{ Weapon(rand() % (int)Weapon::MAX) }, precision{ ((float)(rand() % 100)) / 100.0f }, life{ rand() % 100 } {};
+	Player() : weapon{ Weapon(rand() % (int)Weapon::MAX) }, precision{ (rand() % 100) / 100.0f }, life{ 100 } {};
 
 };
 
@@ -42,27 +42,31 @@ public:
 		return (life > 0);
 	}
 
-	Zombie() : distancetoPlayer{ rand() % 180 + 20 }, speed{ rand() % 200 / 100.0f }, damage{ rand() % 200 / 100.0f }, life{ rand() % 200 / 100 } {};
+	Zombie() : distancetoPlayer{ rand() % 180 + 20 }, speed{ rand() % 200 / 100.0f }, damage{ rand() % 200 / 100.0f }, life{ 100 } {};
 };
 
 void Player::attack(Zombie &malo) {
-	malo.life -= static_cast<float>(static_cast<int>(weapon))*precision;
+	malo.life -= static_cast<float>(weapon)*precision;
 }
 
 int main()
 {
-	int amountOfZombies=10;
+	srand(time(nullptr));
+	const int amountOfZombies=10;
 	Player player;
-	Zombie zombies[10];
+	Zombie zombies[amountOfZombies];
 	bool zombiesAreAlive;
 	std::string arma;
 	do {
 		zombiesAreAlive = false;
+		std::cout << "Player\n" << "	life: " << player.life << ", weapon: " << arma << ", precision: " << player.precision << std::endl;
 		for (int i = 0; i < amountOfZombies; i++) {
-			player.attack(zombies[i]);
-			zombies[i].attack(player);
-			if (zombies[i].isalive())
+			if (zombies[i].isalive()) {
+				player.attack(zombies[i]);
+				zombies[i].attack(player);
+
 				zombiesAreAlive = true;
+			}
 			switch (player.weapon) {
 			case Weapon::FISTS: arma = "FISTS";
 				break;
@@ -78,13 +82,11 @@ int main()
 				break;
 
 			}
-			if(i==0)
-			std::cout << "Player\n" << "	life: " << player.life << ", weapon: " << arma << ", precision: " << player.precision << std::endl;
 			std::cout << "Zombie[" << i << "]\n" << "	life: " << zombies[i].life << ", distance: " << zombies[i].distancetoPlayer << ", speed: " << zombies[i].speed;
 			std::cout << ", damage: " << zombies[i].damage << std::endl;
 		}
 		std::cout << "\n ------------------------------------------------------- " << std::endl;
-	} while (zombiesAreAlive && player.life<0);
+	} while (zombiesAreAlive && player.isalive());
 	if (zombiesAreAlive)
 		std::cout << "\nHAS PERDUT, HO SENTO";
 	else
