@@ -90,5 +90,5 @@ int main()
 	if (zombiesAreAlive)
 		std::cout << "\nHAS PERDUT, HO SENTO";
 	else
-		std::cout << "\nHAS GUANYAT, FELICITATS";
+		std::cout << "\nHAS GUANYAT, FELICITAT";
 }
