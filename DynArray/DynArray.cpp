@@ -45,10 +45,16 @@ DynArray& DynArray::operator= (const DynArray &x) {
 	}
 }
 
-DynArray begin(void) const {
-	return m_data[0];
+int* DynArray::begin(void) const {
+
+	return *m_data[0];
 }
 
+int* DynArray::end(void) const {
+	int *fin;
+	fin = m_data[m_capacity];
+	return *m_data[m_capacity];
+}
 
 void main() {
 	int x = 10;
