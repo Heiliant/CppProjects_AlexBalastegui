@@ -18,5 +18,13 @@
     <ClCompile Include="probador.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="probandoeladdclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="probandoeladdclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
