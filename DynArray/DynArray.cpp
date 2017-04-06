@@ -140,5 +140,5 @@ DynArray copy(int *first, int *last, int *dest) {
 	}
 }
 
-void main() {
+void main6() {
 }
