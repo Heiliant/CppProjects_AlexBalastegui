@@ -2,7 +2,7 @@
 #include <vector>
 #include<string>
 
-
+/*
 std::vector<int> AddVectors(std::vector<int> &v1, std::vector<int> &v2) {
 	
 	if (v1.size() > v2.size) {
@@ -15,7 +15,7 @@ std::vector<int> AddVectors(std::vector<int> &v1, std::vector<int> &v2) {
 	return v3;
 }
 
-void main() {
+//void main() {
 
 	/*
 	//Constructor sin argumentos
@@ -39,7 +39,7 @@ void main() {
 	int*pv;
 	pv = new int[4]{ 1, 2, 3, 4 };
 	*/
-
+/*
 	class persona {
 	public:
 		std::string name;
@@ -76,3 +76,4 @@ void main() {
 
 	
 }
+*/
