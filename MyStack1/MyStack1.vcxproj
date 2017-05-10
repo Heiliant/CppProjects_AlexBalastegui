@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E0D49FAB-BAEB-422E-961D-AFD0ACE2BB5D}</ProjectGuid>
+    <ProjectGuid>{57DB6524-EA0A-4165-8567-DA9A56B476BE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Cajadepruebas</RootNamespace>
+    <RootNamespace>MyStack1</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -146,11 +146,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="probador.cpp" />
-    <ClCompile Include="probandoeladdclass.cpp" />
+    <ClCompile Include="myStack.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="probandoeladdclass.h" />
+    <ClInclude Include="myStack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

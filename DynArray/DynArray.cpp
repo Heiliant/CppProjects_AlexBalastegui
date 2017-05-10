@@ -36,6 +36,26 @@ DynArray::~DynArray(void) {
 }
 
 
+void DynArray::push(const int &val) {
+	
+	if (m_size != m_capacity) {
+		m_data[m_size] = val;
+	}
+	else {
+		m_capacity += m_size / 2;
+		int *another = new int[m_capacity + 1];
+		for (int i = 0; i < m_capacity; i++) {
+			another[i] = m_data[i];
+		}
+		another[m_capacity] = val;
+		delete[]m_data;
+		m_data = another;
+		m_capacity += 1;
+	}
+	m_size += 1;
+
+}
+
 DynArray& DynArray::operator= (const DynArray &x) {
 	m_capacity = x.m_capacity;
 	m_size = x.m_size;
@@ -74,7 +94,7 @@ int* DynArray::data(void) const {
 	return &m_data[0];
 }
 
-DynArray operator== (const DynArray& lhs, const DynArray& rhs) {
+bool operator== (const DynArray &lhs, const DynArray &rhs) {
 	bool equality = true;
 	if (lhs.m_capacity != rhs.m_capacity)
 		equality = false;
@@ -87,11 +107,11 @@ DynArray operator== (const DynArray& lhs, const DynArray& rhs) {
 	return equality;
 }
 
-DynArray operator!= (const DynArray& lhs, const DynArray& rhs) {
+bool operator!= (const DynArray& lhs, const DynArray& rhs) {
 
 }
 
-DynArray operator<< (std::ostream &out, const DynArray &x) {
+std::ostream operator<< (std::ostream &out, const DynArray &x) {
 	for (int i = 0; i < x.m_size; i++) {
 		std::cout << x.m_data[i] << ", " << std::fflush;
 	}
@@ -105,22 +125,20 @@ DynArray min(const size_t &lhs, const size_t &rhs) {
 	else return 0;
 } //ni idea de que es un size_t
 
-void DynArray::fill(int * first, int * last, int value) {
-	int *i = &*first;
-	while (i!=last) {
-		*i = value;
-		i = first + (sizeof(int));
-
+DynArray fill(int * first, int * last, int value) {
+	for (int i = 0; i < * last; i++) {
+		m_data[i] = value;
 	}
 }
 
-void DynArray::copy(int *first, int *last, int *dest) {
-	for (int*i = &*first; &*i!=&*last; i += sizeof(int)) {
-		*dest = *i;
-		dest += sizeof (int);
-	}
+DynArray copy(int *first, int *last, int *dest) {
+	
 
+	int dist = &last - &first;
+	for (int i = 0; i < dist; i++) {
+		m_data[dist + i] = m_data[first + i];
+	}
 }
 
-void main() {
+void main6() {
 }

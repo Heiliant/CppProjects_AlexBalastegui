@@ -15,15 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="probador.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="probandoeladdclass.cpp">
+    <ClCompile Include="myStack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="probandoeladdclass.h">
+    <ClInclude Include="myStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

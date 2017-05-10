@@ -15,16 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="probador.cpp">
+    <ClCompile Include="Ranking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="probandoeladdclass.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="probandoeladdclass.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

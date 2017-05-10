@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E0D49FAB-BAEB-422E-961D-AFD0ACE2BB5D}</ProjectGuid>
+    <ProjectGuid>{773127D1-94EF-4642-9E85-16C85ECA0CFE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Cajadepruebas</RootNamespace>
+    <RootNamespace>PlayerRanking</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -146,11 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="probador.cpp" />
-    <ClCompile Include="probandoeladdclass.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="probandoeladdclass.h" />
+    <ClCompile Include="Ranking.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
