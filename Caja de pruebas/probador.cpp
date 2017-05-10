@@ -1,11 +1,8 @@
 #include <iostream>
 
 void main() {
-	int x(10);
-	std::cout << x << std::endl;
-	std::cout << &x << std::endl;
-	std::cout << *&x << std::endl;
-
-	int *y;
-	std::cout << y;
+	int a = 7;
+	int &x=a;
+	if(&x==&a)
+		std::cout << "hell yeah";
 }

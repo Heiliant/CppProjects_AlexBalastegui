@@ -105,16 +105,21 @@ DynArray min(const size_t &lhs, const size_t &rhs) {
 	else return 0;
 } //ni idea de que es un size_t
 
-DynArray fill(int * first, int * last, int value) {
-	for (int i = * first; i < * last; i++) {
-		m_data[i] = value;
+void DynArray::fill(int * first, int * last, int value) {
+	int *i = &*first;
+	while (i!=last) {
+		*i = value;
+		i = first + (sizeof(int));
+
 	}
 }
 
-DynArray copy(int *first, int *last, int *dest) {
-	for (int i = *first; i < *last; i++) {
-		dest[i] = m_data[i];
+void DynArray::copy(int *first, int *last, int *dest) {
+	for (int*i = &*first; &*i!=&*last; i += sizeof(int)) {
+		*dest = *i;
+		dest += sizeof (int);
 	}
+
 }
 
 void main() {
