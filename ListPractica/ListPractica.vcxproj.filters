@@ -15,19 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="myStack.cpp">
+    <ClCompile Include="enlisted.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="myList.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="myStack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="myList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

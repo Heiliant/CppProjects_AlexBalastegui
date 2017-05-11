@@ -18,10 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="enlisted.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{57DB6524-EA0A-4165-8567-DA9A56B476BE}</ProjectGuid>
+    <ProjectGuid>{A946D6FB-1EC3-4268-899B-925A36D2881C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>MyStack1</RootNamespace>
+    <RootNamespace>ListPractica</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -145,14 +148,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="myList.cpp" />
-    <ClCompile Include="myStack.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="myList.h" />
-    <ClInclude Include="myStack.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
