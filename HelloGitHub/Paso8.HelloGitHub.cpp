@@ -22,7 +22,7 @@ int operator +(animal a, animal b) {
 //};
 
 
-void main() {
+void main4() {
 	int scores[] = { 84, 92, 76, 81, 56 };
 	//printOpt(scores, 5);
 	animal perro{ 5, 10 };

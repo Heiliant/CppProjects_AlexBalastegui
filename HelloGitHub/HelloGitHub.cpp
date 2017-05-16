@@ -45,7 +45,7 @@ class Player {
 	}
 };
 
-int main()
+int main5()
 {
 	Weapon a = Weapon::SNIPER;
 

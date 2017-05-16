@@ -49,7 +49,7 @@ void Player::attack(Zombie &malo) {
 	malo.life -= static_cast<float>(weapon)*precision;
 }
 
-int main()
+int main3()
 {
 	srand(time(nullptr));
 	const int amountOfZombies=10;
