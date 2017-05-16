@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynArray", "DynArray\DynArr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stackerino", "Stackerino\Stackerino.vcxproj", "{430D7DB7-FDA4-400B-8F96-EC370260734E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "myList", "myList\myList.vcxproj", "{29A8FD00-BC7D-460D-BC35-F7851AD1FA0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{430D7DB7-FDA4-400B-8F96-EC370260734E}.Release|x64.Build.0 = Release|x64
 		{430D7DB7-FDA4-400B-8F96-EC370260734E}.Release|x86.ActiveCfg = Release|Win32
 		{430D7DB7-FDA4-400B-8F96-EC370260734E}.Release|x86.Build.0 = Release|Win32
+		{29A8FD00-BC7D-460D-BC35-F7851AD1FA0A}.Debug|x64.ActiveCfg = Debug|x64
+		{29A8FD00-BC7D-460D-BC35-F7851AD1FA0A}.Debug|x64.Build.0 = Debug|x64
+		{29A8FD00-BC7D-460D-BC35-F7851AD1FA0A}.Debug|x86.ActiveCfg = Debug|Win32
+		{29A8FD00-BC7D-460D-BC35-F7851AD1FA0A}.Debug|x86.Build.0 = Debug|Win32
+		{29A8FD00-BC7D-460D-BC35-F7851AD1FA0A}.Release|x64.ActiveCfg = Release|x64
+		{29A8FD00-BC7D-460D-BC35-F7851AD1FA0A}.Release|x64.Build.0 = Release|x64
+		{29A8FD00-BC7D-460D-BC35-F7851AD1FA0A}.Release|x86.ActiveCfg = Release|Win32
+		{29A8FD00-BC7D-460D-BC35-F7851AD1FA0A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
