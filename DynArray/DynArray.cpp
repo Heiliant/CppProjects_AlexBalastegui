@@ -111,7 +111,7 @@ bool operator!= (const DynArray& lhs, const DynArray& rhs) {
 
 }
 
-std::ostream operator<< (std::ostream &out, const DynArray &x) {
+std::ostream operator << (std::ostream &out, const DynArray &x) {
 	for (int i = 0; i < x.m_size; i++) {
 		std::cout << x.m_data[i] << ", " << std::fflush;
 	}
