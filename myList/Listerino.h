@@ -10,8 +10,10 @@ public:
 
 	node* first;
 	node* last;
+	int mida;
 
 	Listerino();
+	Listerino(Listerino &another);
 	~Listerino();
 
 	int front();
