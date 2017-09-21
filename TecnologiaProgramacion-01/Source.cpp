@@ -62,7 +62,7 @@ void soloq() {
 
 	q two(one);
 
-	while (one.size() != 0) {std::cout << one.}
+	while (one.size() != 0) { std::cout << one.front() << std::endl; one.pop(); }
 
 }
 
@@ -156,7 +156,7 @@ void lmao(proba a) {
 }
 
 void main() {
-	dect();
+	soloq();
 
 	int z = 0;
 	
