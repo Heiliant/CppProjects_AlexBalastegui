@@ -28,40 +28,42 @@ void vect() {
 
 	for(int &i : second)
 		std::cout << i << std::endl;
-
-	for()
-
 }
 
 void dect() {
 	using dec = std::deque<int>;
 
-	dec first(2, 3);
-	dec second;
+	dec first;
+	dec second(5, 3);
+	dec third(second.begin() + 1, second.end());
+	dec forth(second);
 
-	second = first;
+	for (int i = 0; i < second.size(); ++i)
+		std::cout << second.at(i) << std::endl;
 
-	for (int i : first)
+	std::cout << std::endl;
+
+	for (dec::iterator i = second.begin(); i != second.end(); ++i)
+		std::cout << *i << std::endl;
+
+	std::cout << std::endl;
+
+	for (int &i : second)
 		std::cout << i << std::endl;
-
-	for (int i : second)
-		std::cout << i << std::endl;
-
-int z = 0;
 }
 
 void soloq() {
 	using q = std::queue<int>;
 
 	q one;
-	q two;
 
-	one.push(2);
-	one.push(3);
+	for (int i = 0; i < 5; ++i)
+		one.push(i);
 
-	two = one;
+	q two(one);
 
-	int a=9;
+	while (one.size() != 0) {std::cout << one.}
+
 }
 
 void prior() {
@@ -154,7 +156,7 @@ void lmao(proba a) {
 }
 
 void main() {
-	vect();
+	dect();
 
 	int z = 0;
 	
