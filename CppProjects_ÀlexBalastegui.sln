@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloGitHub", "HelloGitHub\HelloGitHub.vcxproj", "{6DC94B49-41B9-4B1F-8C96-830D88F04889}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stackerino", "Stackerino\Stackerino.vcxproj", "{430D7DB7-FDA4-400B-8F96-EC370260734E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "myList", "myList\myList.vcxproj", "{29A8FD00-BC7D-460D-BC35-F7851AD1FA0A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TecnologiaProgramacion-01", "TecnologiaProgramacion-01\TecnologiaProgramacion-01.vcxproj", "{F1BF292A-C5E4-4BBD-B760-C59EEDEDFC64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,8 +73,19 @@ Global
 		{29A8FD00-BC7D-460D-BC35-F7851AD1FA0A}.Release|x64.Build.0 = Release|x64
 		{29A8FD00-BC7D-460D-BC35-F7851AD1FA0A}.Release|x86.ActiveCfg = Release|Win32
 		{29A8FD00-BC7D-460D-BC35-F7851AD1FA0A}.Release|x86.Build.0 = Release|Win32
+		{F1BF292A-C5E4-4BBD-B760-C59EEDEDFC64}.Debug|x64.ActiveCfg = Debug|x64
+		{F1BF292A-C5E4-4BBD-B760-C59EEDEDFC64}.Debug|x64.Build.0 = Debug|x64
+		{F1BF292A-C5E4-4BBD-B760-C59EEDEDFC64}.Debug|x86.ActiveCfg = Debug|Win32
+		{F1BF292A-C5E4-4BBD-B760-C59EEDEDFC64}.Debug|x86.Build.0 = Debug|Win32
+		{F1BF292A-C5E4-4BBD-B760-C59EEDEDFC64}.Release|x64.ActiveCfg = Release|x64
+		{F1BF292A-C5E4-4BBD-B760-C59EEDEDFC64}.Release|x64.Build.0 = Release|x64
+		{F1BF292A-C5E4-4BBD-B760-C59EEDEDFC64}.Release|x86.ActiveCfg = Release|Win32
+		{F1BF292A-C5E4-4BBD-B760-C59EEDEDFC64}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AB4B3BA-0D53-4566-8F26-A5D7F2D7EBF9}
 	EndGlobalSection
 EndGlobal
