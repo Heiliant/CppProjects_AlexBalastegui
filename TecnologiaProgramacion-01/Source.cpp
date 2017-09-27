@@ -11,7 +11,7 @@
 ///////////////////FALTAN STACK, LIST, F_LIST, MAP Y SET, GOMS. //////////////////////////////
 //BORRA ESTO CUANDO ACABES
 
-void vect() {
+void vector() {
 	using vec = std::vector<int>;
 
 	vec first; //constructor vacio
@@ -46,7 +46,7 @@ void vect() {
 
 }
 
-void dect() {
+void deque() {
 	using dec = std::deque<int>;
 
 	dec first; //constructor vacio
@@ -87,7 +87,7 @@ void dect() {
 	} while (!forth.empty());
 }
 
-void soloq() {
+void queue() {
 	using q = std::queue<int>;
 	std::deque<int> aux(2, 3);
 
@@ -106,7 +106,7 @@ void soloq() {
 
 }
 
-void prior() {
+void priorityqueue() {
 	using pri = std::priority_queue<int>;
 
 	int arr[5]{ 0, 1, 2, 3, 4 };
@@ -118,91 +118,133 @@ void prior() {
 		std::cout << two.top() << std::endl;
 		two.pop();
 	}
-
-
 }
 
-void stax() {
-	using sx = std::stack<int>;
+void stack() {
+	using st= std::stack<int>;
+	std::deque <int> myD(2, 3);
 
-	sx one;
-	sx two;
+	st one; //constructor vacio
+	st two(myD); //constructor por copia de deque
 
-	one.push(9);
+	one = two;
 
-	two = one;
-
-	int a = 0;
+	while (!two.empty()) { //iteración a través del popeo
+		std::cout << two.top() << std::endl;
+		two.pop();
+	}
 }
 
-void enlist() {
+void list() {
 	using list = std::list<int>;
 
-	list one(1, 3);
-	list two;
+	list one; //constructor vacio
+	list two(3, 4); //constructor de relleno
+	list three(two.begin(), two.end()); //constructo por rango
+	list four(two); //constructor por copia
 
-	two = one;
+	for (list::iterator i = two.begin(); i != two.end(); ++i) { //bucle usando forward iterator
+		std::cout << *i << std::endl;
+	}
 
-	int a = 0;
+	std::cout << std::endl;
+
+	for (list::reverse_iterator i = two.rbegin(); i != two.rend(); ++i) { //bucle usando reverse iterator
+		std::cout << *i << std::endl;
+	}
+
+	std::cout << std::endl;
+
+	while (!two.empty()) {//popeando el front e imprimiendo este
+		std::cout << two.front() << std::endl;
+		two.pop_front();
+	}
+
+	std::cout << std::endl;
+
+	while (!four.empty()) {//popeando el back e imprimiendo este
+		std::cout << four.back() << std::endl;
+		four.pop_back();
+	}
 }
 
-void flist() {
+void f_list() {
 	using flit = std::forward_list<int>;
 
-	flit one(1, 9);
-	flit two;
+	flit one; //constructor por defecto
+	flit two(3, 9); //constructor de relleno
+	flit three(two.begin(), two.end()); //constructor por rango
+	flit four(three); //constructor por copia
+	flit five(std::move(four)); //constructor por move. Los elementos de four se han movido a five, dejando four vacío
+	flit six = { 1, 2, 3, 4, 5 }; //constructor por lista de inicialización
 
-	two = one;
+	for (flit::iterator a = two.begin(); a != two.end(); ++a) { //iteración por forward iterator
+		std::cout << *a << std::endl;
+	}
 
-	int a = 0;
+	std::cout << std::endl;
+
+	while (!two.empty()) { //iteración popeando
+		std::cout << two.front() << std::endl;
+		two.pop_front();
+	}
 }
 
-void mapa() {
+void map() {
 	using map = std::map<int, char>;
 
-	map a;
-	map b;
-	a[9] = 'a';
+	map aux;
+	for (int i = 0; i < 10; ++i) {
+		aux[i] = static_cast<char>(i+65);
+	}
 
-	b = a;
 
-	int z = 9;
+	map a; //constructor por defecto
+	map b(aux.begin(), aux.end()); //constructor por rando
+	map c(aux);  //constructor por copia
+
+	for (std::pair<int, char> z : c) { //iteración usando foreach
+		std::cout << z.first << " - " << z.second << std::endl;
+	}
+
+	std::cout << std::endl;
+
+	for (map::iterator x = c.begin(); x != c.end(); ++x) { //iteración con forward iterator
+		std::cout << x->first << " - " << x->second << std::endl;
+	}
+
+	std::cout << std::endl;
+
+	for (map::reverse_iterator x = c.rbegin(); x != c.rend(); ++x) { //iteración con reverse iterator
+		std::cout << x->first << " - " << x->second << std::endl;
+	}
 }
 
-void seta() {
+void set() {
 	using set = std::set<int>;
 
-	set a;
-	set b;
+	set aux;
+	for(int i=0; i<10; ++i)
+		aux.emplace(i);
 
-	a.insert(9);
+	set a; //default constructor
+	set b(aux.begin(), aux.end()); //constructor por rango
+	set c(aux); //constructor por copia
+	
 
-	b = a;
+	for (int z : c) //iteración con foreach
+		std::cout << z << std::endl;
 
-	int z = 0;
+	std::cout << std::endl;
+
+	for (set::iterator z = c.begin(); z != c.end(); ++z) //iteración con forward iterator
+		std::cout << *z << std::endl;
+
+	std::cout << std::endl;
+
+	for (set::reverse_iterator z = c.rbegin(); z != c.rend(); ++z) //iteración con reverse iterator
+		std::cout << *z << std::endl;
 }
 
-class proba {
-private:
-	int i;
-public:
-	proba(int a) {
-		i = a;
-	}
-	int get_i() {
-		return i;
-	}
-};
-
-void lmao(proba a) {
-	std::cout << a.get_i() << std::endl;
-}
-
-void main() {
-	dect();
-
-	int z = 0;
-	
-	
-	
+void main() {	
 }
