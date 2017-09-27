@@ -8,75 +8,118 @@
 #include <map>
 #include <set>
 
+///////////////////FALTAN STACK, LIST, F_LIST, MAP Y SET, GOMS. //////////////////////////////
+//BORRA ESTO CUANDO ACABES
+
 void vect() {
 	using vec = std::vector<int>;
 
-	vec first;
-	vec second(5, 2);
-	vec third(second.begin() + 1, second.end());
-	vec forth(second);
+	vec first; //constructor vacio
+	vec second(5, 2); //constructor para rellenar
+	vec third(second.begin() + 1, second.end()); //constructor por rango
+	vec forth(second); //constructor por copia
 
-	for (int i = 0; i < second.size(); ++i)
+	for (int i = 0; i < second.size(); ++i) //bucle for iterando por el size del vector
 		std::cout << second.at(i) << std::endl;
 
 	std::cout << std::endl;
 
-	for(vec::iterator i=second.begin(); i!=second.end(); ++i)
+	for(vec::iterator i=second.begin(); i!=second.end(); ++i) //forward iterator
 		std::cout << *i << std::endl;
 
 	std::cout << std::endl;
 
-	for(int &i : second)
+	for (vec::reverse_iterator i = second.rbegin(); i != second.rend(); ++i) //backward iterator
+		std::cout << *i << std::endl;
+
+	std::cout << std::endl;
+
+	for(int &i : second) //bucle foreach
 		std::cout << i << std::endl;
+
+	std::cout << std::endl;
+
+	while (!second.empty()){ //popeando y printeando el back
+		std::cout << second.back() << std::endl;
+		second.pop_back();
+	}
+
 }
 
 void dect() {
 	using dec = std::deque<int>;
 
-	dec first;
-	dec second(5, 3);
-	dec third(second.begin() + 1, second.end());
-	dec forth(second);
+	dec first; //constructor vacio
+	dec second(5, 3); //constructor con argumentos para rellenar
+	dec third(second.begin() + 1, second.end()); //constructor por rango
+	dec forth(second); //constructor por copia
 
-	for (int i = 0; i < second.size(); ++i)
-		std::cout << second.at(i) << std::endl;
+	second.push_back(1);
+
+	for (int i = 0; i < second.size(); ++i) //bucle for
+		std::cout << second.at(i) << std::endl; 
 
 	std::cout << std::endl;
 
-	for (dec::iterator i = second.begin(); i != second.end(); ++i)
+	for (dec::iterator i = second.begin(); i != second.end(); ++i) //forward iterator
 		std::cout << *i << std::endl;
 
 	std::cout << std::endl;
 
-	for (int &i : second)
+	for (dec::reverse_iterator i = second.rbegin(); i != second.rend(); ++i) //backward iterator
+		std::cout << *i << std::endl;
+
+	std::cout << std::endl;
+
+	for (int i : second) //bucle foreach
 		std::cout << i << std::endl;
+	
+	std::cout << std::endl;
+
+	do { //popeando y printeando el front
+		std::cout << second.front() << std::endl;
+		second.pop_front();
+	} while (!second.empty());
+
+	do { //popeando y printeando el back
+		std::cout << forth.back() << std::endl;
+		forth.pop_back();
+	} while (!forth.empty());
 }
 
 void soloq() {
 	using q = std::queue<int>;
+	std::deque<int> aux(2, 3);
 
-	q one;
 
-	for (int i = 0; i < 5; ++i)
+	q one; //constructor vacío
+
+
+	for (int i = 0; i < 5; ++i) 
 		one.push(i);
 
-	q two(one);
+	q two(one); //constructor por copia de queue
 
-	while (one.size() != 0) { std::cout << one.front() << std::endl; one.pop(); }
+	while (one.size() != 0) { std::cout << one.front() << std::endl; one.pop(); } //popeando y printeando el front
+
+	q three(aux); //constructor por copia de deque
 
 }
 
 void prior() {
 	using pri = std::priority_queue<int>;
 
-	pri one;
-	pri two;
+	int arr[5]{ 0, 1, 2, 3, 4 };
 
-	one.push(9);
+	pri one; //constructor vacio
+	pri two(arr, arr + 3); //constructor por rango de un array
 
-	two = one;
+	while (!two.empty()) { //popeando y printeando el top
+		std::cout << two.top() << std::endl;
+		two.pop();
+	}
 
-	int a = 0;
+
 }
 
 void stax() {
@@ -156,7 +199,7 @@ void lmao(proba a) {
 }
 
 void main() {
-	soloq();
+	dect();
 
 	int z = 0;
 	
